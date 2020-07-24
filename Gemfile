@@ -6,4 +6,15 @@ source "https://rubygems.org"
 gemspec
 
 gem "rake", "~> 12.0"
-gem "rspec", "~> 3.0"
+
+group :test, :development do
+  gem 'guard'
+  gem 'rspec'
+  gem 'rubocop'
+  gem 'cucumber'
+  gem 'aruba'
+  gem 'guard-bundler', require: false
+  gem 'guard-rspec', require: false
+  gem 'guard-rubocop', require: false
+  gem 'guard-cucumber', require: false
+end
